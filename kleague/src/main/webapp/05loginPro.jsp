@@ -14,6 +14,8 @@
 <title>Login</title>
 </head>
 <body>
+
+<!-- 아직 로그인이 안돼는 상태... -->
 <%
 	UserDAO userDAO = new UserDAO();
 	int result = userDAO.login(user.getUserID(), user.getUserPassword());
