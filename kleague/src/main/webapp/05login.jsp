@@ -29,7 +29,7 @@
       <label for="userPassword">PW</label>
     </div>
 
-    <input type="submit" button class="w-100 btn btn-lg btn-primary" value="로그인" >
+    <button type="submit" button class="w-100 btn btn-lg btn-primary" onclick="location.href='00index.jsp'">로그인</button>
     
     <p class="mt-5 mb-3 text-muted">©2022 ~ </p>
   </form>

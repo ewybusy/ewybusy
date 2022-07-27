@@ -20,6 +20,7 @@
 	if (result == 1){
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
+		script.println("alert('로그인성공')");
 		script.println("location.href = '00index.jsp'");
 		script.println("</script>");
 	}

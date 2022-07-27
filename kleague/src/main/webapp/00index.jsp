@@ -46,7 +46,7 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       
         <div class="col">
-          <div class="card shadow-sm" style="height:auto; width:100%; border:2px solid black ">
+          <div class="card shadow-sm" style="height:auto; width:auto%; border:2px solid black ">
             <!--  <svg class="bd-placeholder-img card-img-top" alt="col image" style="width:100%"width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" style="background-image: url('http://file3.instiz.net/data/file3/2021/02/13/2/e/7/2e7ad74bac9c1c62a2252a2640412508.jpg');">-->
             <title>1위팀</title>
        		<img class="bd-placeholder-img card-img-top" src="https://www.kleague.com/assets/images/mobile/emblem/emblem_K01.png" alt="col image" width="225" height="225">
