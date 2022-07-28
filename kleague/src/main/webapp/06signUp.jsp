@@ -16,7 +16,7 @@
 
 <h1 class="h3 mb-3 fw-normal">회원가입 페이지</h1>
 	<form action ="06signUpPro.jsp" method="post">
-	
+	  
 	<div class="form-floating">
 		<input type="text" class="form-control" id="userID" name = "userID">
 		<label for="userID">ID</label>

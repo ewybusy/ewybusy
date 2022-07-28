@@ -15,8 +15,13 @@
 </head>
 <body>
 
-<!-- 아직 로그인이 안돼는 상태... -->
+
 <%
+
+	String id = request.getParameter("id");
+	String pw = request.getParameter("pw");
+
+
 	UserDAO userDAO = new UserDAO();
 	int result = userDAO.login(user.getUserID(), user.getUserPassword());
 	if (result == 1){
@@ -46,8 +51,23 @@
 		script.println("alert('DB 오류가 발생하였습니다.')");
 		script.println("history.back()"); // 이전 페이지로 회원을 돌려 보낸다.
 		script.println("</script>");
-	}
+
 %>
+
+<%
+
+}else{
+	session.setAttribute("id", id);
+	response.sendRedirect("00index.jsp");
+	%>
+	
+	<%
+}
+	%>
+	
+	
+}
+
 
 
 </body>
