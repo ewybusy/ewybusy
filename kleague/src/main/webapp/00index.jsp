@@ -11,6 +11,13 @@
 <title>KLeague Data Center</title>
 </head>
 <body>
+<%
+	String userID = null;
+	if(session.getAttribute("userID") != null){
+		userID = (String) session.getAttribute("userID");
+	}
+	
+%>
 
 <!-- 홈페이지 제목-->
 <h1 align="center">KLeague Data Center</h1>
@@ -34,13 +41,27 @@
 
       <div class="col-md-3 text-end">
 
-<button type="button" class="btn btn-outline-primary me-2" onclick="location.href='05login.jsp'">로그인</button>
 
- 
+<%
+	if(userID == null){
+%>
+<button type="button" class="btn btn-outline-primary me-2" onclick="location.href='05login.jsp'">로그인</button> 
 <button type="button" class="btn btn-primary" onclick="location.href='06signUp.jsp'">회원가입</button>
       </div>
     </header>
   </div>
+		
+<%
+	}else{
+%>
+<button type="button" class="btn btn-outline-primary me-2" onclick="location.href='05logOutPro.jsp'">로그아웃</button>
+<!-- <button type="button" class="btn btn-primary" onclick="location.href='06signUp.jsp'">회원가입</button> -->
+      </div>
+    </header>
+  </div>
+<%
+	}
+%>
 
 
 <!--  메인페이지 부분 -->
