@@ -7,20 +7,24 @@ import java.sql.ResultSet;
 
 public class UserDAO {
 	
-	private Connection conn;
-	private PreparedStatement pstmt;
-	private ResultSet rs;
+//	private Connection conn;
+//	private PreparedStatement pstmt;
+//	private ResultSet rs;
+	
+	Connection conn = null;
+	PreparedStatement pstmt = null;
+	ResultSet rs = null;
 	
 	// 실제 mysql에 로그인 하게 해줌
 	public UserDAO() {
+		String dbURL = "jdbc:mysql://localhost:3306/kleague?serverTimezone=UTC&useSSL=false";
+		String dbID = "root";
+		String dbPassword = "root";
 		try {
-			String dbURL = "jdbc:mysql://localhost:3306";
-			String dbID = "root";
-			String dbPassword = "root";
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
 		} catch (Exception e) {
-e.printStackTrace();
+			e.printStackTrace();
 		}
 	}
 	

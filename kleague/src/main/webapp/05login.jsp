@@ -16,7 +16,7 @@
 <body class="text-center" style="cursor: url(&quot;null&quot;), default;">
     
 <main class="form-signin">
-  <form>
+  <form action="05loginPro.jsp" method="post">
     <h1 class="h3 mb-3 fw-normal">로그인 페이지</h1>
 
     <div class="form-floating">
@@ -29,7 +29,7 @@
       <label for="userPassword">PW</label>
     </div>
 
-    <button type="submit" button class="w-100 btn btn-lg btn-primary" onclick="location.href='00index.jsp'">로그인</button>
+    <button type="submit" button class="w-100 btn btn-lg btn-primary">로그인</button>
     
     <p class="mt-5 mb-3 text-muted">©2022 ~ </p>
   </form>
