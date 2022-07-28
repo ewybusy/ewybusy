@@ -26,25 +26,24 @@
 
 <body>
 
-<form method="post" action="contentWriteProcess.jsp">
+<form method="post" action="03freeBoardwriteAction.jsp">
 
 <div class="container">
 
-  <h2>게시판 글쓰기</h2>          
+  <h2>게시판 글쓰기 양식</h2>          
 
   <table class="table table-hover">
-
     <tbody>
 
       <tr>
 
-      	<td><input type="text" class="form-control" placeholder="글 제목" name="contentTitle" maxlength="40"></td>
+      	<td><input type="text" class="form-control" placeholder="글 제목" name="bbsTitle" maxlength="50"></td>
 
       </tr>
 
       <tr>
 
-      	<td><textarea type="text" class="form-control" placeholder="글 내용을 작성하세요" name="contentDetail" maxlength="1024" style="height: 400px;"></textarea></td>
+      	<td><textarea class="form-control" placeholder="글 내용을 작성하세요" name="bbsContent" maxlength="2048" style="height: 400px;"></textarea></td> <!-- textarea는 장문의 글을 작성시에 사용 -->
 
       </tr>
 
@@ -54,6 +53,7 @@
 
   <input type="submit" class="btn btn-primary pull-right" value="글쓰기">
 
+</form>
 </div>
 
 </form>

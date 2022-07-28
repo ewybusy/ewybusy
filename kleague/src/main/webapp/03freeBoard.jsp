@@ -27,6 +27,7 @@
 <body>
 
 <div class="container">
+<form method="post" action="03freeBoardPro.jsp">
 
   <h2>게시판</h2>          
 
@@ -41,6 +42,8 @@
         <th>제목</th>
 
         <th>글쓴이</th>
+        
+        <th>작성일</th>
 
 
       </tr>
@@ -57,6 +60,7 @@
 
         <td>김테스트</td>
 
+		<th>2022-07-28</th>
 
       </tr>
 
@@ -66,6 +70,7 @@
 
   <a href="03freeBoardPro.jsp" class="btn btn-primary pull-right">글쓰기</a>
 
+</form>
 </div>
 
 </body> 
