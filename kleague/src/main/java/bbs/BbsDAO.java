@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 public class BbsDAO { 
 //	Connection conn = null;
@@ -25,6 +26,7 @@ public class BbsDAO {
 		}
 	}
 
+	// 작성일자 메서드
 	public String getDate() { //  현재의 시간 가져오기
 		String SQl = "SELECT NOW()";
 		try {
@@ -39,8 +41,9 @@ public class BbsDAO {
 		return ""; // DB 오류
 	}
 
+	// 게시글 번호 부여
 	public int getNext() {
-		String SQl = "SELECT bbsID FROM BBS ORDER BY bbsID DESC"; 
+		String SQl = "SELECT * FROM BBS ORDER BY bbsID DESC;"; // 원래 소스 String SQl = "SELECT bbsID FROM BBS ORDER BY bbsID DESC";  
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQl);
 			rs = pstmt.executeQuery(); 
@@ -51,10 +54,10 @@ public class BbsDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 		return -1; // DB 오류
 	}
-
+	
+	// 글쓰기 메서드
 	public int write(String bbsTitle, String userID, String bbsContect) {
 		String SQL = "INSERT INTO BBS VALUES (?, ?, ?, ?, ?, ?)"; 
 		try {
@@ -72,5 +75,48 @@ public class BbsDAO {
 
 		return -1; // DB 오류
 	}
+	
+	// 게시글 리스트 메서드
+	public ArrayList<Bbs> getList(int pageNumber){
+		String SQL = "SELECT * FROM BBS WHERE bbsID < ? AND bbaAvaliable = 1 ORDER BY bbsID DESC LIMIT10;";
+		ArrayList<Bbs> list = new ArrayList<Bbs>();
+				try {
+					PreparedStatement pstmt = conn.prepareStatement(SQL);
+					pstmt.setInt(1, getNext() - (pageNumber-1)*10);
+					rs = pstmt.executeQuery();
+					while(rs.next()) {
+						Bbs bbs = new Bbs();
+						bbs.setBbsID(rs.getInt(1));
+						bbs.setBbsTitle(rs.getString(2));
+						bbs.setUserID(rs.getString(3));
+						bbs.setBbsDate(rs.getString(4));
+						bbs.setBbsContent(rs.getString(5));
+						bbs.setBbsAvaliable(rs.getInt(6));
+						list.add(bbs);
+					}
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+		return list;
+	}
+	
+	// 페이징 처리 메서드
+	public boolean nextPage(int pageNumber) {
+		String SQL = "SELECT * FROM BBS WHERE bbsID < ? AND bbsAvaliable = 1";
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(SQL);
+			pstmt.setInt(1,  getNext() - (pageNumber-1)*10);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				return true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
+	
 
 } 

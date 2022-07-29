@@ -2,14 +2,14 @@ package bbs;
 
 public class Bbs {
 
-	// ÀÚ¹Ù ºóÁö Å¬·¡½º Á¦ÀÛ
+	// �횣쨔횢 쨘처횁철 횇짭쨌징쩍쨘 횁짝�횤
 
 	private int bbsID;
 	private String bbsTitle;
 	private String userID;
 	private String bbsDate;
 	private String bbsContent;
-	private int bbsAvailable;
+	private int bbsAvaliable;
 
 
 	public int getBbsID() {
@@ -42,10 +42,10 @@ public class Bbs {
 	public void setBbsContent(String bbsContent) {
 		this.bbsContent = bbsContent;
 	}
-	public int getBbsAvailable() {
-		return bbsAvailable;
+	public int getBbsAvaliable() {
+		return bbsAvaliable;
 	}
-	public void setBbsAvailable(int bbsAvailable) {
-		this.bbsAvailable = bbsAvailable;
+	public void setBbsAvaliable(int bbsAvaliable) {
+		this.bbsAvaliable = bbsAvaliable;
 	}
 }
