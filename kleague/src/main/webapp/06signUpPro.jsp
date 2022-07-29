@@ -49,6 +49,7 @@ if (userID != null){
 			session.setAttribute("userID", user.getUserID()); // 세션
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
+			script.println("alert('회원가입 완료! 메인화면으로 이동합니다.')");
 			script.println("location.href = '00index.jsp'");
 			script.println("</script>");
 		}

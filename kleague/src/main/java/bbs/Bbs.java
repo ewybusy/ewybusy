@@ -1,8 +1,8 @@
 package bbs;
 
 public class Bbs {
-	
-	// ÀÚ¹Ù ºóÁö Å¬·¡½º Á¦ÀÛ
+
+	// Ã€ÃšÂ¹Ã™ ÂºÃ³ÃÃ¶ Ã…Â¬Â·Â¡Â½Âº ÃÂ¦Ã€Ã›
 
 	private int bbsID;
 	private String bbsTitle;
@@ -10,8 +10,8 @@ public class Bbs {
 	private String bbsDate;
 	private String bbsContent;
 	private int bbsAvailable;
-	
-	
+
+
 	public int getBbsID() {
 		return bbsID;
 	}

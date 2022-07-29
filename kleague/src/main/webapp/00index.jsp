@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%@ page import = "java.io.PrintWriter" %>
+<%@ page import = "bbs.BbsDAO" %>
+<%@ page import = "bbs.Bbs" %>
+<%@ page import = "java.util.ArrayList" %>
 <html>
 <!-- 부트스트랩(프레임워크) 가져오기 -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -15,6 +19,10 @@
 	String userID = null;
 	if(session.getAttribute("userID") != null){
 		userID = (String) session.getAttribute("userID");
+	}
+	int pageNumber = 1;
+	if (request.getParameter("pageNumber") != null) {
+		pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
 	}
 	
 %>

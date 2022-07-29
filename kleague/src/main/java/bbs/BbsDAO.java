@@ -8,10 +8,10 @@ import java.sql.ResultSet;
 public class BbsDAO { 
 //	Connection conn = null;
 //	ResultSet rs = null;
-	
+
 	private Connection conn;
 	private ResultSet rs;
-	
+
 	// 실제 mysql에 로그인 하게 해줌
 	public BbsDAO() {
 		String dbURL = "jdbc:mysql://localhost:3306/bbs";
@@ -24,7 +24,7 @@ public class BbsDAO {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public String getDate() { //  현재의 시간 가져오기
 		String SQl = "SELECT NOW()";
 		try {
@@ -38,7 +38,7 @@ public class BbsDAO {
 		}
 		return ""; // DB 오류
 	}
-	
+
 	public int getNext() {
 		String SQl = "SELECT bbsID FROM BBS ORDER BY bbsID DESC"; 
 		try {
@@ -51,10 +51,10 @@ public class BbsDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return -1; // DB 오류
 	}
-	
+
 	public int write(String bbsTitle, String userID, String bbsContect) {
 		String SQL = "INSERT INTO BBS VALUES (?, ?, ?, ?, ?, ?)"; 
 		try {
@@ -69,8 +69,8 @@ public class BbsDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return -1; // DB 오류
 	}
 
-}
+} 

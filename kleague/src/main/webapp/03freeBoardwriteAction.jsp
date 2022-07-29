@@ -21,7 +21,8 @@ String userID=null;
 if(session.getAttribute("userID") != null){
 userID = (String) session.getAttribute("userID"); 
 }
-if (userID != null){
+
+if (userID == null){
 	PrintWriter script = response.getWriter();
 	script.println("<script>");
 	script.println("alert('로그인을 하세요.')");
@@ -50,20 +51,16 @@ if (userID != null){
 			script.println("<script>");
 			script.println("location.href = '03freeBoard.jsp'");
 			script.println("</script>");
-
 		}
 	}
 }
 		
-
 	/* String id = request.getParameter("id");
 	String pw = request.getParameter("pw"); */ 
 %>
-	
+
 
 
 
 </body>
 </html>
-
-

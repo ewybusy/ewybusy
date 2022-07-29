@@ -23,7 +23,7 @@
 	</div>
 	
 	<div class="form-floating">
-		<input type="text" class="form-control" id="userPassword" name = "userPassword">
+		<input type="password" class="form-control" id="userPassword" name = "userPassword">
 		<label for="userPassword">PW</label>
 	</div>
 	
