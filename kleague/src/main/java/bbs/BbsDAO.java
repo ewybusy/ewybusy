@@ -116,6 +116,26 @@ public class BbsDAO {
 		return false;
 	}
 	
-	
+	public Bbs getbbs(int bbsID) {
+		String SQL = "SELECT * FROM BBS WHERE bbsID = ?";
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(SQL);
+			pstmt.setInt(1, bbsID);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				Bbs bbs = new Bbs();
+				bbs.setbbsID(rs.getInt(1));
+				bbs.setbbsTitle(rs.getString(2));
+				bbs.setuserID(rs.getString(3));
+				bbs.setbbsDate(rs.getString(4));
+				bbs.setbbsContent(rs.getString(5));
+				bbs.setbbsAvaliable(rs.getInt(6));
+				return bbs;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null; // 게시글이 없을때 null 반환
+	}
 
 } 

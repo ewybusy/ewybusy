@@ -11,7 +11,7 @@
 
 <h2 class="sub-header" align="center">2022.07.18(월) 현 재 팀 순 위</h2>
 
-<table class="table table-striped">
+<table class="table table-striped" align="center">
               <thead>
                 <tr>
                   <th>팀 순 위</th>
