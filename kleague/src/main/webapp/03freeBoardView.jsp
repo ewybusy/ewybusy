@@ -47,7 +47,7 @@ Bbs bbs = new BbsDAO().getbbs(bbsID);
 <tbody>
 <tr>
 <td>글 제목</td>
-<td colspan="2"><%= bbs.getbbsTitle() %></td>
+<td colspan="2"><%= bbs.getbbsTitle().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&lt;") %></td>
 </tr>
 
 <tr>
@@ -72,8 +72,8 @@ Bbs bbs = new BbsDAO().getbbs(bbsID);
 <%
 	if(userID != null && userID.equals(bbs.getuserID())){
 %>
-		<a href="update.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">수정</a>
-		<a href="deleteAction.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">삭제</a>
+		<a href="03freeBoardUpdate.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">수정</a>
+		<a href="03freeBoardDelete.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">삭제</a>
 		<%
 	}
 		%>

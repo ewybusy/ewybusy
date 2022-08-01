@@ -55,7 +55,7 @@ if(request.getParameter("pageNumber") != null){
        <td><%= list.get(i).getbbsID() %></td>
 
        <!-- 제목을 눌렀을때 해당 게시물로 이동, 해당번호에 맞는 페이지 나올 수 있게 -->
-       <td><a href="03freeBoardView.jsp?bbsID=<%= list.get(i).getbbsID() %>"><%= list.get(i).getbbsTitle() %></a>
+       <td><a href="03freeBoardView.jsp?bbsID=<%= list.get(i).getbbsID() %>"><%= list.get(i).getbbsTitle().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&lt;") %></a>
 
        </td> 
 
