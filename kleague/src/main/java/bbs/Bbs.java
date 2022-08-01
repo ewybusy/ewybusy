@@ -2,8 +2,6 @@ package bbs;
 
 public class Bbs {
 
-	// �횣쨔횢 쨘처횁철 횇짭쨌징쩍쨘 횁짝�횤
-
 	private int bbsID;
 	private String bbsTitle;
 	private String userID;

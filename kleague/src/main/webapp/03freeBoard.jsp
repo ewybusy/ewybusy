@@ -88,7 +88,9 @@ if(request.getParameter("pageNumber") != null){
 <% 
   }
 %>
-  <a href="03freeBoardPro.jsp" class="btn btn-primary pull-right">글쓰기</a>
+
+	<a href="00index.jsp" class="btn btn-primary pull-left">메인이동</a>
+  <a href="03freeBoardPro.jsp" class="btn btn-primary pull-right">글쓰기</a> 
         </div>
     </div>               
 
