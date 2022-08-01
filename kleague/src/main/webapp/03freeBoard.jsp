@@ -52,16 +52,16 @@ if(request.getParameter("pageNumber") != null){
 	for(int i=0; i<list.size(); i++){
 %>
  <tr>
-       <td><%= list.get(i).getBbsID() %></td>
+       <td><%= list.get(i).getbbsID() %></td>
 
        <!-- 제목을 눌렀을때 해당 게시물로 이동, 해당번호에 맞는 페이지 나올 수 있게 -->
-       <td><a href="view.jsp?bbsID=<%= list.get(i).getBbsID() %>"><%= list.get(i).getBbsTitle() %></a>
+       <td><a href="view.jsp?bbsID=<%= list.get(i).getbbsID() %>"><%= list.get(i).getbbsTitle() %></a>
 
        </td> 
 
-       <td><%= list.get(i).getUserID() %></td> 
-       <td><%= list.get(i).getBbsDate().substring(0, 11) + list.get(i).getBbsDate().substring(11, 13) + "시" +
-        list.get(i).getBbsDate().substring(14, 16) + "분"%></td> 
+       <td><%= list.get(i).getuserID() %></td> 
+       <td><%= list.get(i).getbbsDate().substring(0, 11) + list.get(i).getbbsDate().substring(11, 13) + "시" +
+        list.get(i).getbbsDate().substring(14, 16) + "분"%></td> 
    </tr>
    <%
        }
@@ -74,7 +74,8 @@ if(request.getParameter("pageNumber") != null){
 
  <!-- 페이지 이동 -->
 <%
-  if(pageNumber!=1) { //현재 페이지가 있는지, 버튼 생성
+  // if(pageNumber!=1) { //현재 페이지가 있는지, 버튼 생성
+	if(bbsDAO.nextPage(pageNumber-1)){	  
 %>
   <a href = "03freeBoard.jsp?pageNumber=<%=pageNumber-1 %>" class="btn btn-success btn-arraw-left"> 
       이전

@@ -29,7 +29,7 @@ if (userID == null){
 	script.println("location.href = '05login.jsp'");
 	script.println("</script>");
 }else{
-	if(bbs.getBbsTitle() == null || bbs.getBbsContent() == null){
+	if(bbs.getbbsTitle() == null || bbs.getbbsContent() == null){
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("alert('입력이 안 된 사항이 있습니다.')");
@@ -38,7 +38,7 @@ if (userID == null){
 		
 	} else{
 		BbsDAO bbsDAO = new BbsDAO();
-		int result = bbsDAO.write(bbs.getBbsTitle(), userID, bbs.getBbsContent());
+		int result = bbsDAO.write(bbs.getbbsTitle(), userID, bbs.getbbsContent());
 		if (result == -1){
 			PrintWriter script = response.getWriter();
 			script.println("<script>");

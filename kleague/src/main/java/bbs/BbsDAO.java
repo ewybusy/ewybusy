@@ -76,9 +76,9 @@ public class BbsDAO {
 		return -1; // DB 오류
 	}
 	
-	// 게시글 리스트 메서드
+	// 게시글 리스트 메서드 총 10개의 게시글 
 	public ArrayList<Bbs> getList(int pageNumber){
-		String SQL = "SELECT * FROM BBS WHERE bbsID < ? AND bbaAvaliable = 1 ORDER BY bbsID DESC LIMIT10;";
+		String SQL = "SELECT * FROM BBS WHERE bbsID < ? AND bbsAvaliable = 1 ORDER BY bbsID DESC LIMIT 10;";
 		ArrayList<Bbs> list = new ArrayList<Bbs>();
 				try {
 					PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -86,15 +86,14 @@ public class BbsDAO {
 					rs = pstmt.executeQuery();
 					while(rs.next()) {
 						Bbs bbs = new Bbs();
-						bbs.setBbsID(rs.getInt(1));
-						bbs.setBbsTitle(rs.getString(2));
-						bbs.setUserID(rs.getString(3));
-						bbs.setBbsDate(rs.getString(4));
-						bbs.setBbsContent(rs.getString(5));
-						bbs.setBbsAvaliable(rs.getInt(6));
+						bbs.setbbsID(rs.getInt(1));
+						bbs.setbbsTitle(rs.getString(2));
+						bbs.setuserID(rs.getString(3));
+						bbs.setbbsDate(rs.getString(4));
+						bbs.setbbsContent(rs.getString(5));
+						bbs.setbbsAvaliable(rs.getInt(6));
 						list.add(bbs);
-					}
-					
+					}		
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

@@ -12,40 +12,40 @@ public class Bbs {
 	private int bbsAvaliable;
 
 
-	public int getBbsID() {
+	public int getbbsID() {
 		return bbsID;
 	}
-	public void setBbsID(int bbsID) {
+	public void setbbsID(int bbsID) {
 		this.bbsID = bbsID;
 	}
-	public String getBbsTitle() {
+	public String getbbsTitle() {
 		return bbsTitle;
 	}
-	public void setBbsTitle(String bbsTitle) {
+	public void setbbsTitle(String bbsTitle) {
 		this.bbsTitle = bbsTitle;
 	}
-	public String getUserID() {
+	public String getuserID() {
 		return userID;
 	}
-	public void setUserID(String userID) {
+	public void setuserID(String userID) {
 		this.userID = userID;
 	}
-	public String getBbsDate() {
+	public String getbbsDate() {
 		return bbsDate;
 	}
-	public void setBbsDate(String bbsDate) {
+	public void setbbsDate(String bbsDate) {
 		this.bbsDate = bbsDate;
 	}
-	public String getBbsContent() {
+	public String getbbsContent() {
 		return bbsContent;
 	}
-	public void setBbsContent(String bbsContent) {
+	public void setbbsContent(String bbsContent) {
 		this.bbsContent = bbsContent;
 	}
-	public int getBbsAvaliable() {
+	public int getbbsAvaliable() {
 		return bbsAvaliable;
 	}
-	public void setBbsAvaliable(int bbsAvaliable) {
+	public void setbbsAvaliable(int bbsAvaliable) {
 		this.bbsAvaliable = bbsAvaliable;
 	}
 }
