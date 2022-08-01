@@ -44,7 +44,6 @@
         <li><a href="01teamRanking.jsp" class="nav-link px-2 link-dark">팀 순 위</a></li>
         <li><a href="02playerRanking.jsp" class="nav-link px-2 link-dark">선 수 순 위</a></li>
         <li><a href="03freeBoard.jsp" class="nav-link px-2 link-dark">자 유 게 시 판</a></li>
-        <li><a href="04qnaBoard.jsp" class="nav-link px-2 link-dark">Q & A 게 시 판</a></li>
       </ul>
 
       <div class="col-md-3 text-end">

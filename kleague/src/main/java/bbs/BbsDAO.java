@@ -151,4 +151,16 @@ public class BbsDAO {
 		}
 		return -1; // DB 오류
 	}
+	
+	public int delete(int bbsID) {
+		String SQL = "UPDATE BBS SET bbsAvaliable = 0 WHERE bbsID = ?"; // 글을 삭제하더라도 db에 낭믈 수 있게 0 
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(SQL);
+			pstmt.setInt(1, bbsID);
+			return pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -1; // DB 오류
+	}
 } 
