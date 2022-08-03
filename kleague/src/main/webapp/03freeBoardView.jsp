@@ -3,6 +3,7 @@
 <%@ page import = "java.io.PrintWriter" %>
 <%@ page import = "bbs.Bbs" %>
 <%@ page import = "bbs.BbsDAO" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -45,40 +46,41 @@ Bbs bbs = new BbsDAO().getbbs(bbsID);
 
 <thead>
 	<tr>
-	<th colspan="2" style="background-color: eeeeee; text-align: center;">게시판 글보기</th> 
+	<th colspan="2" style="background-color: eeeeee; text-align: center; font-size:40px;">게시판 글보기</th> 
 	</tr>
 </thead>
 
 <tbody>
 <tr>
-<td style="width: 20%;">글 제목</td>
-<td colspan="2" ><%= bbs.getbbsTitle().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&lt;") %></td>
+<td style="width: 20%; font-size:20px;">글 제목</td>
+<td colspan="2" style="font-size:20px;"><%= bbs.getbbsTitle().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&lt;") %></td>
 </tr>
 
 <tr>
-<td>작성자</td>
-<td colspan="2" ><%= bbs.getuserID() %></td>
+<td style="font-size:20px;">작성자</td>
+<td colspan="2" style="font-size:20px;"><%= bbs.getuserID() %></td>
 </tr>
 
 <tr>
-<td>작성일자</td>
-<td colspan="2" ><%= bbs.getbbsDate().substring(0, 11) + bbs.getbbsDate().substring(11, 13) + "시" +
+<td style="font-size:20px;">작성일자</td>
+<td colspan="2" style="font-size:20px;"><%= bbs.getbbsDate().substring(0, 11) + bbs.getbbsDate().substring(11, 13) + "시" +
 		bbs.getbbsDate().substring(14, 16) + "분" %></td>
 </tr>
 
 <tr>
-<td>내용</td>
-<td colspan="2" style="height: 300px;"><%= bbs.getbbsContent().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&lt;") %></td>
+<td style="font-size:20px;">내용</td>
+<td colspan="2" style="height: 500px; font-size:20px;"><%= bbs.getbbsContent().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&lt;").replaceAll("\n", "<br>") %></td>
+
 </tr>
 </tbody>
 </table>
 
-<a href="03freeBoard.jsp" class="btn btn-primary">목록</a>
+<a href="03freeBoard.jsp" class="btn btn-primary " style="font-size : 20px;">목록</a>
 <%
 	if(userID != null && userID.equals(bbs.getuserID())){
 %>
-		<a href="03freeBoardUpdate.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">수정</a>
-		<a onclick="return confirm('정말로 삭제하시겠습니까?')" href="03freeBoardDeleteAction.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">삭제</a>
+		<a href="03freeBoardUpdate.jsp?bbsID=<%= bbsID %>" class="btn btn-primary" style="font-size : 20px;">수정</a>
+		<a onclick="return confirm('정말로 삭제하시겠습니까?')" href="03freeBoardDeleteAction.jsp?bbsID=<%= bbsID %>" class="btn btn-primary" style="font-size : 20px;">삭제</a>
 		<%
 	}
 		%>
