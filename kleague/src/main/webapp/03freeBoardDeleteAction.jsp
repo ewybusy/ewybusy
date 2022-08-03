@@ -10,6 +10,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<!-- 파비콘(타이틀 왼쪽 그림) -->
+<link href="https://media.cdnandroid.com/item_images/920521/imagen-k-league-k-ee-e-0thumb.jpeg" rel="shortcut icon" type="image/x-icon">
 <title>JSP 게시판 웹 사이트</title>
 </head>
 <body>
