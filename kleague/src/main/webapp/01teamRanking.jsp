@@ -15,11 +15,11 @@
     </head>
    <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">팀순위</h1>
+                        <h1 class="mt-4" style="text-align:center;">팀순위</h1>
                         <ol class="breadcrumb mb-4">
                         </ol>
                         <div class="card mb-4">
-                            <div class="card-body">
+                            <div class="card-body" style=" text-align:center;">
                                2022년 08월 03일(수) 현재 팀순위입니다.
                             </div>
                         </div>
@@ -61,18 +61,18 @@
                                     </thead>
                                     
                                     <tbody style="text-align:center;">
-                                    <tr><td>1</td><td>울산현대</td><td>Edinburgh</td><td>61</td><td>2011/04/25</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td></tr>
-                                    <tr><td>2</td><td>전북현대</td><td>Edinburgh</td><td>61</td><td>2011/04/25</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td></tr>
-                                    <tr><td>3</td><td>포항스틸러스</td><td>Edinburgh</td><td>61</td><td>2011/04/25</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td></tr>
-                                    <tr><td>4</td><td>제주유나이티드</td><td>Edinburgh</td><td>61</td><td>2011/04/25</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td></tr>
-                                    <tr><td>5</td><td>인천유나이티드</td><td>Edinburgh</td><td>61</td><td>2011/04/25</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td></tr>
-                                    <tr><td>6</td><td>FC서울</td><td>Edinburgh</td><td>61</td><td>2011/04/25</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td></tr>
-                                    <tr><td>7</td><td>수원FC</td><td>Edinburgh</td><td>61</td><td>2011/04/25</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td></tr>
-                                    <tr><td>8</td><td>강원FC</td><td>Edinburgh</td><td>61</td><td>2011/04/25</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td></tr>
-                                    <tr><td>9</td><td>대구FC</td><td>Edinburgh</td><td>61</td><td>2011/04/25</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td></tr>
-                                    <tr><td>10</td><td>김천상무</td><td>Edinburgh</td><td>61</td><td>2011/04/25</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td></tr>
-                                    <tr><td>11</td><td>수원삼성</td><td>Edinburgh</td><td>61</td><td>2011/04/25</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td></tr>
-                                    <tr><td>12</td><td>성남FC</td><td>Edinburgh</td><td>61</td><td>2011/04/25</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td><td>$320,800</td></tr>
+                                    <tr><td>1</td><td>울산현대</td><td>24</td><td>51</td><td>15</td><td>6</td><td>3</td><td>36</td><td>21</td><td>15</td></tr>
+                                    <tr><td>2</td><td>전북현대</td><td>23</td><td>45</td><td>13</td><td>6</td><td>4</td><td>30</td><td>19</td><td>11</td></tr>
+                                    <tr><td>3</td><td>포항스틸러스</td><td>24</td><td>40</td><td>11</td><td>7</td><td>6</td><td>33</td><td>21</td><td>12</td></tr>
+                                    <tr><td>4</td><td>제주유나이티드</td><td>24</td><td>34</td><td>9</td><td>7</td><td>8</td><td>29</td><td>30</td><td>-1</td></tr>
+                                    <tr><td>5</td><td>인천유나이티드</td><td>23</td><td>33</td><td>8</td><td>9</td><td>6</td><td>27</td><td>25</td><td>2</td></tr>
+                                    <tr><td>6</td><td>FC서울</td><td>24</td><td>30</td><td>7</td><td>9</td><td>8</td><td>30</td><td>29</td><td>1</td></tr>
+                                    <tr><td>7</td><td>수원FC</td><td>23</td><td>29</td><td>8</td><td>5</td><td>10</td><td>35</td><td>38</td><td>-3</td></tr>
+                                    <tr><td>8</td><td>강원FC</td><td>23</td><td>27</td><td>7</td><td>6</td><td>10</td><td>31</td><td>36</td><td>-5</td></tr>
+                                    <tr><td>9</td><td>대구FC</td><td>23</td><td>27</td><td>5</td><td>12</td><td>6</td><td>30</td><td>29</td><td>1</td></tr>
+                                    <tr><td>10</td><td>김천상무</td><td>24</td><td>23</td><td>5</td><td>8</td><td>11</td><td>27</td><td>29</td><td>-2</td></tr>
+                                    <tr><td>11</td><td>수원삼성</td><td>23</td><td>21</td><td>4</td><td>9</td><td>10</td><td>15</td><td>26</td><td>-11</td></tr>
+                                    <tr><td>12</td><td>성남FC</td><td>24</td><td>18</td><td>4</td><td>6</td><td>14</td><td>23</td><td>43</td><td>-20</td></tr>
                                     
                                     </tbody>
                                 </table></div>
