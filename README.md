@@ -12,9 +12,16 @@ MySQL WorkBench
 
 ### 사용한 기술
 Java
+
 JSP
+
 MySQL
+
 html
+
 css
+
 js
+
 Bootstrap
+
