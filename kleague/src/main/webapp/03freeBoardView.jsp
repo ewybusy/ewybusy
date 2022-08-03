@@ -37,33 +37,36 @@ Bbs bbs = new BbsDAO().getbbs(bbsID);
 %>
 
 <div class="container">
+<div class="row">
+</div>
 <table class="table table-striped" style="text-align:center; border: 1px solid #dddddd"> 
+
 <thead>
 	<tr>
-	<th colspan="10" style="background-color: eeeeee; text-align: center;">게시판 글보기 양식</th> 
+	<th colspan="2" style="background-color: eeeeee; text-align: center;">게시판 글보기</th> 
 	</tr>
 </thead>
 
 <tbody>
 <tr>
-<td>글 제목</td>
-<td colspan="2"><%= bbs.getbbsTitle().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&lt;") %></td>
+<td style="width: 20%;">글 제목</td>
+<td colspan="2" ><%= bbs.getbbsTitle().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&lt;") %></td>
 </tr>
 
 <tr>
 <td>작성자</td>
-<td colspan="2"><%= bbs.getuserID() %></td>
+<td colspan="2" ><%= bbs.getuserID() %></td>
 </tr>
 
 <tr>
 <td>작성일자</td>
-<td colspan="2"><%= bbs.getbbsDate().substring(0, 11) + bbs.getbbsDate().substring(11, 13) + "시" +
+<td colspan="2" ><%= bbs.getbbsDate().substring(0, 11) + bbs.getbbsDate().substring(11, 13) + "시" +
 		bbs.getbbsDate().substring(14, 16) + "분" %></td>
 </tr>
 
 <tr>
 <td>내용</td>
-<td colspan="2" style="min-height: 200px; text-align: left;"><%= bbs.getbbsContent().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&lt;") %></td>
+<td colspan="2" style="height: 300px;"><%= bbs.getbbsContent().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&lt;") %></td>
 </tr>
 </tbody>
 </table>

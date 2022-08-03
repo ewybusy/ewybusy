@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
+// 게시판 관련 DAO
+
 public class BbsDAO { 
 //	Connection conn = null;
 //	ResultSet rs = null;
@@ -13,6 +15,7 @@ public class BbsDAO {
 	private Connection conn;
 	private ResultSet rs;
 
+	
 	// 실제 mysql에 로그인 하게 해줌
 	public BbsDAO() {
 		String dbURL = "jdbc:mysql://localhost:3306/bbs";

@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+// 회원관리 관련 DAO
+
 public class UserDAO {
 	
 //	private Connection conn;
@@ -15,6 +17,7 @@ public class UserDAO {
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 	
+	// 추후에는 DataBaseUtil같은 경우로 따로 만들 수 있도록 한다.
 	// 실제 mysql에 로그인 하게 해줌
 	public UserDAO() {
 		String dbURL = "jdbc:mysql://localhost:3306/kleague?serverTimezone=UTC&useSSL=false";

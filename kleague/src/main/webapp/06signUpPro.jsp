@@ -1,4 +1,3 @@
-<%@page import="java.io.PrintWriter"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="user.UserDAO" %>
@@ -11,7 +10,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Login</title>
+<title>회원가입</title>
 </head>
 <body>
 
@@ -28,7 +27,7 @@ if (userID != null){
 	script.println("location.href = '00index.jsp'");
 	script.println("</script>");
 }
-	if(user.getUserID() == null || user.getUserPassword() == null){
+	if(user.getUserID() == null || user.getUserPassword() == null){ // ID와 PW 둘 중 하나라도 빈칸일시
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("alert('입력이 안 된 사항이 있습니다.')");
