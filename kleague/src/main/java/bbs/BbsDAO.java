@@ -16,11 +16,12 @@ public class BbsDAO {
 	private ResultSet rs;
 
 	
-	// 실제 mysql에 로그인 하게 해줌
+	// AWS 로그인 설정
+	// user,bbs 따로가 아니고 sql 한 프로젝트 안에 같이 쓸 수 있도록 한다.
 	public BbsDAO() {
-		String dbURL = "jdbc:mysql://localhost:3306/bbs";
-		String dbID = "root";
-		String dbPassword = "root";
+		String dbURL = "jdbc:mysql://database-1.cjdkyisyys3a.ap-northeast-2.rds.amazonaws.com:3306/bbs";
+		String dbID = "admin";
+		String dbPassword = "TQ1s13P6XCa";
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
@@ -46,7 +47,7 @@ public class BbsDAO {
 
 	// 게시글 번호 부여
 	public int getNext() {
-		String SQl = "SELECT * FROM BBS ORDER BY bbsID DESC;"; // 원래 소스 String SQl = "SELECT bbsID FROM BBS ORDER BY bbsID DESC";  
+		String SQl = "SELECT * FROM bbs ORDER BY bbsID DESC;"; // 원래 소스 String SQl = "SELECT bbsID FROM BBS ORDER BY bbsID DESC";  
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQl);
 			rs = pstmt.executeQuery(); 
@@ -62,7 +63,7 @@ public class BbsDAO {
 	
 	// 글쓰기 메서드
 	public int write(String bbsTitle, String userID, String bbsContect) {
-		String SQL = "INSERT INTO BBS VALUES (?, ?, ?, ?, ?, ?)"; 
+		String SQL = "INSERT INTO bbs VALUES (?, ?, ?, ?, ?, ?)"; 
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			pstmt.setInt(1, getNext());
@@ -81,7 +82,7 @@ public class BbsDAO {
 	
 	// 게시글 리스트 메서드 총 10개의 게시글 
 	public ArrayList<Bbs> getList(int pageNumber){
-		String SQL = "SELECT * FROM BBS WHERE bbsID < ? AND bbsAvaliable = 1 ORDER BY bbsID DESC LIMIT 10;";
+		String SQL = "SELECT * FROM bbs WHERE bbsID < ? AND bbsAvaliable = 1 ORDER BY bbsID DESC LIMIT 10;";
 		ArrayList<Bbs> list = new ArrayList<Bbs>();
 				try {
 					PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -105,7 +106,7 @@ public class BbsDAO {
 	
 	// 페이징 처리 메서드
 	public boolean nextPage(int pageNumber) {
-		String SQL = "SELECT * FROM BBS WHERE bbsID < ? AND bbsAvaliable = 1";
+		String SQL = "SELECT * FROM bbs WHERE bbsID < ? AND bbsAvaliable = 1";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			pstmt.setInt(1,  getNext() - (pageNumber-1)*10);
@@ -120,7 +121,7 @@ public class BbsDAO {
 	}
 	
 	public Bbs getbbs(int bbsID) {
-		String SQL = "SELECT * FROM BBS WHERE bbsID = ?";
+		String SQL = "SELECT * FROM bbs WHERE bbsID = ?";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			pstmt.setInt(1, bbsID);
@@ -142,7 +143,7 @@ public class BbsDAO {
 	}
 
 	public int update(int bbsID, String bbsTitle, String bbsContent) {
-		String SQL = "UPDATE BBS SET bbsTitle = ?, bbsContent = ? WHERE bbsID = ?"; 
+		String SQL = "UPDATE bbs SET bbsTitle = ?, bbsContent = ? WHERE bbsID = ?"; 
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, bbsTitle);
@@ -156,7 +157,7 @@ public class BbsDAO {
 	}
 	
 	public int delete(int bbsID) {
-		String SQL = "UPDATE BBS SET bbsAvaliable = 0 WHERE bbsID = ?"; // 글을 삭제하더라도 db에 낭믈 수 있게 0 
+		String SQL = "UPDATE bbs SET bbsAvaliable = 0 WHERE bbsID = ?"; // 글을 삭제하더라도 db에 낭믈 수 있게 0 
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			pstmt.setInt(1, bbsID);

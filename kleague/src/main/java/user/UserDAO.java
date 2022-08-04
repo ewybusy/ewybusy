@@ -18,11 +18,12 @@ public class UserDAO {
 	ResultSet rs = null;
 	
 	// 추후에는 DataBaseUtil같은 경우로 따로 만들 수 있도록 한다.
-	// 실제 mysql에 로그인 하게 해줌
+	// AWS 로그인 설정 
+	// user,bbs 따로가 아니고 sql 한 프로젝트 안에 같이 쓸 수 있도록 한다.
 	public UserDAO() {
-		String dbURL = "jdbc:mysql://localhost:3306/kleague?serverTimezone=UTC&useSSL=false";
-		String dbID = "root";
-		String dbPassword = "root";
+		String dbURL = "jdbc:mysql://database-1.cjdkyisyys3a.ap-northeast-2.rds.amazonaws.com:3306/user";
+		String dbID = "admin";
+		String dbPassword = "TQ1s13P6XCa";
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
@@ -32,7 +33,7 @@ public class UserDAO {
 	}
 	
 	public int login(String userID, String userPassword) {
-		String SQL = "SELECT userPassword FROM USER WHERE userID = ?";
+		String SQL = "SELECT userPassword FROM user WHERE userID = ?";
 		try {
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, userID);
