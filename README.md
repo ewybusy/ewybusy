@@ -10,6 +10,9 @@ JavaSE-1.8 jdk1.8.0_202
 
 MySQL WorkBench
 
+Amazone Database
+
+
 ### 사용한 기술
 Java
 
