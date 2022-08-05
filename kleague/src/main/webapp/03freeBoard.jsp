@@ -21,6 +21,14 @@
 </head>
 <body>
 
+<style>
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+</style>
+
+
+
+
+
 <%
 	String userID = null;
 if(session.getAttribute("userID") != null){
@@ -95,6 +103,8 @@ if(request.getParameter("pageNumber") != null){
 	<a href="00index.jsp" class="btn btn-primary pull-left">메인이동</a>
   <a href="03freeBoardPro.jsp" class="btn btn-primary pull-right">글쓰기</a> 
         </div>
-    </div>               
+    </div>      
+    
+    
 
 </body>  

@@ -12,7 +12,7 @@
 <meta charset="UTF-8">
 <!-- 파비콘(타이틀 왼쪽 그림) -->
 <link href="https://media.cdnandroid.com/item_images/920521/imagen-k-league-k-ee-e-0thumb.jpeg" rel="shortcut icon" type="image/x-icon">
-<title>K League Data Center</title>
+<title>K LEAGUE DATA CENTER</title>
 </head>
 <body>
 <%
@@ -31,25 +31,25 @@
 <!-- <h1 align="center">KLeague Data Center</h1>
 <hr /> -->
 
-<div class="sidebar-heading border-bottom bg-light" align="center" style="font-size:40px;">K League Data Center</div>
+<!-- 메인페이지 헤더부분 (가장 윗부분) -->
+<div class="sidebar-heading border-bottom" align="center" style="font-size:40px;">K LEAGUE DATA CENTER</div>
 
 
 <!-- 네비게이션 부분 -->
 <div class="container">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
       <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
         <svg class="bi me-2" width=50" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
       </a>
 
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="00index.jsp" class="nav-link px-2 link-secondary" style="font-size:25px;">메 인 페 이 지</a></li>
+       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" > 
+        <li><a href="00index.jsp" class="nav-link px-2 link-dark" style="font-size:25px;">메 인 페 이 지</a></li>
         <li><a href="01teamRanking.jsp" class="nav-link px-2 link-dark" style="font-size:25px;">팀 순 위</a></li>
         <li><a href="02playerRanking.jsp" class="nav-link px-2 link-dark" style="font-size:25px;">선 수 순 위</a></li>
         <li><a href="03freeBoard.jsp" class="nav-link px-2 link-dark" style="font-size:25px;">자 유 게 시 판</a></li>
       </ul>
 
       <div class="col-md-3 text-end">
-
 
 <%
 	if(userID == null){
@@ -64,7 +64,7 @@
 	}else{
 %>
 <button type="button" class="btn btn-outline-primary me-2" onclick="location.href='05logOutPro.jsp'">로그아웃</button>
-<!-- <button type="button" class="btn btn-primary" onclick="location.href='06signUp.jsp'">회원가입</button> -->
+
       </div>
     </header>
   </div>
@@ -72,6 +72,7 @@
 	}
 %>
 
+<hr />
 
 <!--  메인페이지 부분 -->
 <div class="container">
