@@ -13,7 +13,6 @@
 <link href="https://media.cdnandroid.com/item_images/920521/imagen-k-league-k-ee-e-0thumb.jpeg" rel="shortcut icon" type="image/x-icon">
 <title>게시판 글쓰기 페이지</title>
 </head>
-
 <body>
 
 <form method="post" action="03freeBoardwriteAction.jsp">

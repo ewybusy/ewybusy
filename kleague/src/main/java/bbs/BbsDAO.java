@@ -62,7 +62,7 @@ public class BbsDAO {
 	}
 	
 	// 글쓰기 메서드
-	public int write(String bbsTitle, String userID, String bbsContect) {
+	public int write(String bbsTitle, String userID, String bbsContent) {
 		String SQL = "INSERT INTO bbs VALUES (?, ?, ?, ?, ?, ?)"; 
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -70,7 +70,7 @@ public class BbsDAO {
 			pstmt.setString(2, bbsTitle);
 			pstmt.setString(3, userID);
 			pstmt.setString(4, getDate());
-			pstmt.setString(5, bbsContect);
+			pstmt.setString(5, bbsContent);
 			pstmt.setInt(6, 1);
 			return pstmt.executeUpdate();
 		} catch (Exception e) {

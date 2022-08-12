@@ -66,9 +66,7 @@ if(request.getParameter("pageNumber") != null){
        <td><%= list.get(i).getbbsID() %></td>
 
        <!-- 제목을 눌렀을때 해당 게시물로 이동, 해당번호에 맞는 페이지 나올 수 있게 -->
-       <td><a href="03freeBoardView.jsp?bbsID=<%= list.get(i).getbbsID() %>"><%= list.get(i).getbbsTitle().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&lt;") %></a>
-
-       </td> 
+       <td><a href="03freeBoardView.jsp?bbsID=<%= list.get(i).getbbsID() %>"><%= list.get(i).getbbsTitle().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&lt;") %></a></td> 
 
        <td><%= list.get(i).getuserID() %></td> 
        <td><%= list.get(i).getbbsDate().substring(0, 11) + list.get(i).getbbsDate().substring(11, 13) + "시" +
@@ -100,10 +98,10 @@ if(request.getParameter("pageNumber") != null){
   }
 %>
 
-	<a href="00index.jsp" class="btn btn-primary pull-left">메인이동</a>
-  <a href="03freeBoardPro.jsp" class="btn btn-primary pull-right">글쓰기</a> 
+<a href="00index.jsp" class="btn btn-primary pull-left">메인이동</a>
+<a href="03freeBoardPro.jsp" class="btn btn-primary pull-right">글쓰기</a> 
         </div>
-    </div>      
+    
     
     
 
