@@ -16,7 +16,9 @@ Java
 
 JSP
 
-Bootstrap을 활용한 메인디자인 짜집기 연습
+Bootstrap을 활용한 메인디자인 짜집기 제작
+
+Filezilla+gabia를 활용한 
 
 🔎 프로젝트 서술
 
